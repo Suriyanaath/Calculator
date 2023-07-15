@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   .fno_box
+   {
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:lightcyan;
+    margin-left: 15px;
+   }
+   .sno_box
+   {
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:lightcyan;
+    margin-left: 15px;
+   }
+   .res_box
+   {
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:lightcyan;
+    margin-left: 110px;
+   }
+   .add-button
+   {
+    background-color: orange;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+   }
+   .sub-button
+   {
+      background-color: orange;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+   }
+   .mul-button
+   {
+      background-color: orange;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+   }
+   .div-button
+   {
+      background-color: orange;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+   }
+   .body{
+    background-color: lightblue;
+    height: 350px;
+    width: 400px;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin-top: 200px;
+    margin-left: 500px;
+   }
+</style>
+ <script>
+    function add()
+    {
+       num1=Number(document.getElementById('i1').value);
+       num2=Number(document.getElementById('i2').value);
+       result=num1+num2;
+       document.getElementById('r').value=result;
+    }
+    function sub()
+    {
+       num1=Number(document.getElementById('i1').value);
+       num2=Number(document.getElementById('i2').value);
+       result=Math.abs(num1-num2);
+       document.getElementById('r').value=result;
+    }
+    function mul()
+    {
+       num1=Number(document.getElementById('i1').value);
+       num2=Number(document.getElementById('i2').value);
+       result=Math.abs(num1*num2);
+       document.getElementById('r').value=result;
+    }
+    function div()
+    {
+       num1=Number(document.getElementById('i1').value);
+       num2=Number(document.getElementById('i2').value);
+       result=num1/num2;
+       document.getElementById('r').value=result;
+    }
+
+ </script>
+
+   <body class="body">
+      <center><h1 style="font-family: Arial, Helvetica, sans-serif;"><u>Calculator</u></h1></center>
+      
+       <input class="fno_box" type="number" id="i1" placeholder="Enter 1st number">
+       <input class="sno_box" type="number" id="i2" placeholder="Enter 2nd number">
+       <br>
+       <br>
+       <button class="add-button" onclick="add()"><b>+</b></button>
+       <button class="sub-button" onclick="sub()"><b>-</b></button>
+       <button class="div-button" onclick="div()"><b>/</b></button>
+       <button class="mul-button" onclick="mul()"><b>*</b></button>
+       <br><br>
+       <input class="res_box" type="text" id="r" placeholder="Result">
+   </body>
+
+</html>
